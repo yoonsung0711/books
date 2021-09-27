@@ -1,0 +1,50 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width,initial-scale=1')
+    title Document
+    link(rel='stylesheet' href='./css/bundle.css')
+    link(rel='stylesheet' href='./css/style.css')
+    script(src='./bundle.js')
+  body
+    h1 보유한 책 / 읽은 책 
+    table#example.display(width='100%')
+
+    div.jumbotron.vertical-center
+      div.row
+        div.container.col-md-3
+        div.container.col-md-6.text-center
+          div#carousel-example-generic.carousel.slide(data-ride='carousel')
+            //  Indicators 
+            ol.carousel-indicators
+              li.active(data-target='#carousel-example-generic' data-slide-to='0')
+              li(data-target='#carousel-example-generic' data-slide-to='1')
+              li(data-target='#carousel-example-generic' data-slide-to='2')
+              li(data-target='#carousel-example-generic' data-slide-to='3')
+            //  Wrapper for slides 
+            div.carousel-inner(role='listbox')
+              div.item.active
+                img(src='./images/img1.jpg' alt='...')
+                div.carousel-caption 
+              div.item
+                img(src='./images/img2.jpg' alt='...')
+                div.carousel-caption 
+              div.item
+                img(src='./images/img3.jpg' alt='...')
+                div.carousel-caption 
+              div.item
+                img(src='./images/img4.jpg' alt='...')
+                div.carousel-caption 
+            //  Controls 
+            a.left.carousel-control(href='#carousel-example-generic' role='button' data-slide='prev')
+              span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+              span.sr-only Previous
+            a.right.carousel-control(href='#carousel-example-generic' role='button' data-slide='next')
+              span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+              span.sr-only Next
+        div.container.col-md-3
+
+
+    script(src='./app.js')
